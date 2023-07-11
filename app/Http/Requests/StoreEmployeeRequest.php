@@ -13,11 +13,11 @@ class StoreEmployeeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Birthday' => 'required|date',
             'FirstName' => 'required|string|max:255',
             'LastName' => 'required|string|max:255',
-            'Gendrer' => 'required|string',
+            'Birthday' => 'required|date',
             'HireDate' => 'required|date',
+            'Gendrer' => 'required|string',
             
         ];
     }

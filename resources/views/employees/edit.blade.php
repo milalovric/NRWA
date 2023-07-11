@@ -59,7 +59,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Gender</label>
-                    <input type="text" name="Gender" class ="form-control @error('Gender') is-invalid @enderror" value="{{ $employee->Gender }}">
+                    <input type="text" name="Gendrer" class ="form-control @error('Gender') is-invalid @enderror" value="{{ $employee->Gender }}">
                     @error('Gender')
                         <span class="text-danger">
                             <strong>{{ $message }}</strong>

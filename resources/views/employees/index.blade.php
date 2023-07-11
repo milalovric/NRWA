@@ -126,7 +126,7 @@
         background-color: yellow;
         font-weight: bold;
     }
-</style>
+</style> 
 
 
 @endsection

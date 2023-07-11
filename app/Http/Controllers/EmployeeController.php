@@ -6,6 +6,7 @@ use App\Models\Employee;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
 
+
 class EmployeeController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $employees = Employee::all();
-        return view('employees.index') -> with('employees', $employees);
+        return view('employees.index')->with('employees', $employees);
     }
 
     /**
@@ -23,7 +24,6 @@ class EmployeeController extends Controller
     public function create()
     {
         return view('employees.create');
-    
     }
 
     /**
@@ -34,13 +34,12 @@ class EmployeeController extends Controller
         Employee::create($request->validated());
         return back()->with('success', 'Employee created successfully.');
     }
-
     /**
      * Display the specified resource.
      */
     public function show(Employee $employee)
     {
-        return view ('employees.show')->with('employee', $employee);
+        return view('employees.show')->with('employee', $employee);
     }
 
     /**
@@ -59,7 +58,7 @@ class EmployeeController extends Controller
     {
         $employee = Employee::findOrFail($employee->id);
         $employee->update($request->validated());
-        return back()->with('success', 'Employee edited successfully.');
+        return back()->with('success', 'Employee updated successfully.');
     }
 
     /**
@@ -71,7 +70,7 @@ class EmployeeController extends Controller
         return back()->with('success', 'Employee deleted successfully.');
     }
 
-    public function search(Employee $request)
+   /* public function search(Employee $request)
     {
         $searchTerm = $request->input('search');
 
@@ -82,8 +81,7 @@ class EmployeeController extends Controller
 
     public function render()
     {
-        $employee = Employee::where('FirstName', 'LIKE', '%'.$this->search.'%')->orderBy('id','DESC')->paginate(6);
+        $employee = Employee::where('FirstName', 'LIKE', '%' . $this->search . '%')->orderBy('id', 'DESC')->paginate(6);
         return view('employee.index', ['employees' => $employee]);
-    }
-
+    }*/
 }
