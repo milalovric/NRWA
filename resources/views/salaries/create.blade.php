@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+    <a href="{{ url('/salaries') }}" class="btn btn-primary">{{ __('Salaries') }}</a>
     <div class="card  col-6 offset-3" >
         <div class="card-header">Create Salary</div>
         <div class="card-body">

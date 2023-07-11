@@ -10,6 +10,11 @@
             <input type="text" id="search-input" placeholder="Search...">
             <ul id="search-results"></ul>
         </div>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <a href="{{ url('/employees/create') }}" class="btn btn-primary float-end">{{ __('Create') }}</a>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -50,8 +55,6 @@
         </div>
     </div>
 </div>
-
-
 
 <script>
     var searchInput = document.getElementById('search-input');
@@ -127,6 +130,5 @@
         font-weight: bold;
     }
 </style> 
-
 
 @endsection

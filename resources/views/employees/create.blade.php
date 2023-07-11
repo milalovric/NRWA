@@ -3,6 +3,10 @@
 @section('content')
 
 <div class="container">
+    <div class="d-flex">
+
+        <a href="{{ url('/employees') }}" class="btn btn-primary">{{ __('Employees') }}</a>
+    </div>
     <div class="card col-6 offset-3">
         <div class="card-header">Create Employee</div>
         <div class="card-body">

@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="conteiner">
+  <a href="{{ url('/departments/create') }}" class="btn btn-primary">{{ __('Departments Create') }}</a>
     @include ('messages')
     <table class="table">
         <thead>

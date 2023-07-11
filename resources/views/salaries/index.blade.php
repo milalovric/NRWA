@@ -1,7 +1,9 @@
 @extends ('layouts.app')
 
 @section('content')
+@include('layouts.navbar')
 <div class="conteiner">
+  <a href="{{ url('/salaries/create') }}" class="btn btn-primary">{{ __('Salaries Create') }}</a>
     @include ('messages')
     <table class="table">
         <thead>
